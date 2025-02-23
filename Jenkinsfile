@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'agent1'  // This ensures it runs on the Windows agent
+    }
     stages {
         stage('Checkout') {
             steps {
